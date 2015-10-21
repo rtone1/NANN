@@ -1,0 +1,12 @@
+/* Table of content
+- Repeated Styles and Fonts
+- Header and Navigation
+- Page Footer
+- Media Queries
+- Animations
+*/
+
+@font-face {
+  font-family: OpenSans;
+  src: url('../../public/fonts/OPENSANS.TTF') format('truetype');
+}
