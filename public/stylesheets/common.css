@@ -6,7 +6,137 @@
 - Animations
 */
 
+/*REPEATED STYLES SECTION*/
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a img{
+  border: none;
+  outline: none;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+header{
+  position: relative;
+}
+
 @font-face {
   font-family: OpenSans;
   src: url('../../public/fonts/OPENSANS.TTF') format('truetype');
+}
+@font-face {
+  font-family: OpenSansBold;
+  src: url('../../public/fonts/OPENSANS-SEMIBOLD.TTF') format('truetype');
+}
+
+/*HEADER AND NAVIGATION*/
+header{
+  height: 150px;
+  width: 100%;
+  max-width: 2600px;
+  padding: 0px 10px;
+  background-color: #fff;
+  border-top: solid 35px #429fac;
+  border-bottom: solid 2px gray;
+}
+
+  .navTop{
+    position: absolute;
+    display: inline-block;
+    top: -35px;
+    right: 3%;
+    padding: 2px 10px 20px;
+    background-color: #BFD730;
+    border-radius: 0px 0px 20px 20px;;
+  }
+  .navTop div.navlist{
+    display: inline-block;
+    font-family: OpenSansBold, 'Arial', sans-serif;
+  }
+  .navTop ul li{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .navTop ul li a{
+    color: #2d48a0;
+  }
+
+.search{
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  margin: 0px 10px 0px 20px;
+}
+.searchIcon{
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: #2d48a0;
+}
+.circle,
+.line{
+  position: relative;
+}
+.circle{
+  top: 10%;
+  left: 15%;
+  width: 25px;
+  height: 25px;
+  border: solid 4px #BFD730;
+  border-radius: 20px;
+}
+.line{
+  top: 10%;
+  left: 50%;
+  width: 18px;
+  border: solid 4px #BFD730;
+  border-radius: 4px 2px 2px 4px;
+  transform: rotate(50deg);
+}
+/*input[type=text]{
+  width: 250px;
+  padding: 5px 10px;
+  border: 1px solid rgb(120, 137, 147);
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: OpenSans, Helvetica, Arial, sans-serif;
+}
+input[type=text]:active,
+input[type=text]:focus{
+outline: 0;
+border: 1px solid #93B7CC;
+}*/
+
+
+
+@media only screen and (max-width: 550px){
+
 }
