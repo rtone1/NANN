@@ -5,13 +5,15 @@ $(function(){
     $(target).on('click', function(){
       if (counter === 0 ){
         $(action).addClass('expand');
-        $('.searchIcon').addClass('searchActive');
         $(action).removeClass('unexpand');
+        $('.searchIcon').addClass('searchActive');
+        $('.searchIcon').removeClass('unActivate');
         counter += 1;
       } else{
         $(action).addClass('unexpand');
         $(action).removeClass('expand');
         $('.searchIcon').removeClass('searchActive');
+        $('.searchIcon').addClass('unActivate');
         counter -= 1;
       }
     });

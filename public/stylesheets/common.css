@@ -59,21 +59,43 @@ header{
 }
 
 /*HEADER AND NAVIGATION*/
+header::before,
+header::after{
+  content: "";
+  display: table;
+}
+header::after{
+  clear: both;
+}
 header{
-  height: 150px;
+  clear: both;
   width: 100%;
   max-width: 2600px;
-  padding: 0px 10px;
   background-color: #fff;
-  border-top: solid 35px #429fac;
-  border-bottom: solid 2px gray;
+  text-align: center;
+}
+.headerBorder{
+  height: 35px;
+  width: 100%;
+  padding: 0px 3%;
+  background-color: #429fac;
+}
+
+.nav-ct{
+  padding: 0px 3%;
+}
+.nav-ct > a img.logo{
+  float: left;
+  width: 10%;
+  min-width: 180px;
+  max-width: 350px;
+  margin: 10px 0px 0px 10px;
 }
 
   .navTop{
-    position: absolute;
+    position: relative;
     display: inline-block;
-    top: -35px;
-    right: 3%;
+    float: right;
     padding: 7px 10px 20px;
     background-color: #BFD730;
     border-radius: 0px 0px 20px 20px;;
@@ -112,7 +134,12 @@ header{
   }
   .searchActive{
     background-color: #429FAC;
-    animation: zoomIn .5s forwards;
+    animation: clockWise .5s forwards;
+    transition: all .2s linear 0s;
+  }
+  .unActivate{
+    background-color: #15539c;
+    animation: counterClockWise .5s forwards;
     transition: all .2s linear 0s;
   }
   .circle,
@@ -154,6 +181,25 @@ input[type=text]:focus{
 outline: 0;
 border: 1px solid #93B7CC;
 }
+
+  .mainNav{
+    float: right;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: OpenSansBold, 'Arial', sans-serif;
+  }
+  .mainNav ul li{
+    display: inline-block;
+  }
+  .mainNav ul li a{
+    display: block;
+    width: 140px;
+    padding: 10px 5px;
+    color: #15539c;
+  }
+  .mainNav ul li a:hover{
+    border-bottom: solid 4px #ef632f;
+  }
 
 /*MEDIA QUERIES */
 
