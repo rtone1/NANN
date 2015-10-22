@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>INDEX LANDING</title>
     <link rel="stylesheet" href="../public/stylesheets/common.css" media="screen">
+    <link rel="stylesheet" href="../public/stylesheets/animations.css" media="screen">
   </head>
   <body>
 
@@ -26,9 +27,12 @@
           </div>
 
           <div class="search">
+            <form class="searchForm" action="index.html" method="post">
+              <input class="textSearch" type="text" name="name" placeholder="search...">
+            </form>
             <div class="searchIcon">
-              <div class="circle"></div>
-              <div class="line"></div>
+                <div class="circle"></div>
+                <div class="line"></div>
             </div>
           </div>
 
@@ -36,9 +40,6 @@
 
     </header>
 
-    <!-- <form class="" action="index.html" method="post">
-      <input class="u-full-width" type="text" name="name" value="">
-    </form> -->
     <!-- SCRIPTS DEPENDENCIES -->
     <script src="../public/javascripts/lib/jquery.min.js"></script>
     <!-- APPLICATION JAVASCRIPT -->

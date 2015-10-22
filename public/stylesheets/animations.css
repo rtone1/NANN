@@ -1,0 +1,13 @@
+@keyframes expandSearch{
+  0% { width: 45px; }
+  100% { width: 250px; }
+}
+@keyframes removeExpand{
+  0% { width: 250px; }
+  100% { width: 45px; }
+}
+
+@keyframes zoomIn{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

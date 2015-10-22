@@ -11,6 +11,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 article,
@@ -73,12 +74,14 @@ header{
     display: inline-block;
     top: -35px;
     right: 3%;
-    padding: 2px 10px 20px;
+    padding: 7px 10px 20px;
     background-color: #BFD730;
     border-radius: 0px 0px 20px 20px;;
   }
   .navTop div.navlist{
     display: inline-block;
+    vertical-align: bottom;
+    font-size: 16px;
     font-family: OpenSansBold, 'Arial', sans-serif;
   }
   .navTop ul li{
@@ -86,7 +89,7 @@ header{
     margin-left: 10px;
   }
   .navTop ul li a{
-    color: #2d48a0;
+    color: #15539c;
   }
 
 .search{
@@ -95,37 +98,54 @@ header{
   top: 10px;
   margin: 0px 10px 0px 20px;
 }
-.searchIcon{
-  width: 45px;
+
+  .searchIcon{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: #15539c;
+    z-index: 2;
+  }
+  .searchActive{
+    background-color: #429FAC;
+    animation: zoomIn .5s forwards;
+    transition: all .2s linear 0s;
+  }
+  .circle,
+  .line{
+    position: relative;
+  }
+  .circle{
+    top: 10%;
+    left: 15%;
+    width: 25px;
+    height: 25px;
+    border: solid 4px #BFD730;
+    border-radius: 20px;
+  }
+  .line{
+    top: 6%;
+    left: 50%;
+    width: 20px;
+    border: solid 4px #BFD730;
+    border-radius: 4px 2px 2px 4px;
+    transform: rotate(50deg);
+  }
+
+.searchForm{
+  display: inline-block;
+  vertical-align: top;
+}
+input[type=text]{
   height: 45px;
-  border-radius: 30px;
-  background-color: #2d48a0;
-}
-.circle,
-.line{
-  position: relative;
-}
-.circle{
-  top: 10%;
-  left: 15%;
-  width: 25px;
-  height: 25px;
-  border: solid 4px #BFD730;
-  border-radius: 20px;
-}
-.line{
-  top: 10%;
-  left: 50%;
-  width: 18px;
-  border: solid 4px #BFD730;
-  border-radius: 4px 2px 2px 4px;
-  transform: rotate(50deg);
-}
-/*input[type=text]{
-  width: 250px;
+  width: 45px;
   padding: 5px 10px;
-  border: 1px solid rgb(120, 137, 147);
-  border-radius: 4px;
+  border: solid 1px transparent;
+  border-radius: 30px;
   font-size: 18px;
   font-family: OpenSans, Helvetica, Arial, sans-serif;
 }
@@ -133,10 +153,29 @@ input[type=text]:active,
 input[type=text]:focus{
 outline: 0;
 border: 1px solid #93B7CC;
-}*/
+}
 
+/*MEDIA QUERIES */
 
+/* Larger than mobile */
+@media (min-width: 400px) {}
 
-@media only screen and (max-width: 550px){
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
 
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+/*ANIMATIONS CLASSES*/
+.expand{
+  animation: expandSearch .2s linear forwards;
+}
+.unexpand{
+  animation: removeExpand .2s linear forwards;
 }
