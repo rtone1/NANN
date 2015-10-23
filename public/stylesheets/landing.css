@@ -1,0 +1,26 @@
+/*MAIN HERO SECTION*/
+.heroMain::before,
+.heroMain::after{
+  content: "";
+  display: table;
+}
+.heroMain::after{
+  clear: both;
+}
+
+.heroMain{
+  clear: both;
+  width: 100%;
+  padding: 50px;
+  background: url("../../public/images/heroMain.jpg") #fff no-repeat;
+  background-size: cover;
+  color: #15539c;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.att-heading{
+  float: right;
+  width: 400px;
+  margin: 100px 0px;
+  font-size: 38px;
+  line-height: 48px;
+}

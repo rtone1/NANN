@@ -2,7 +2,16 @@
   0% { width: 45px; }
   100% { width: 250px; }
 }
+@-webkit-keyframes expandSearch{
+  0% { width: 45px; }
+  100% { width: 250px; }
+}
+
 @keyframes removeExpand{
+  0% { width: 250px; }
+  100% { width: 45px; }
+}
+@-webkit-keyframes removeExpand{
   0% { width: 250px; }
   100% { width: 45px; }
 }
@@ -11,8 +20,16 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+@-webkit-keyframes clockWise{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 @keyframes counterClockWise{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@-webkit-keyframes counterClockWise{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(-360deg); }
 }
