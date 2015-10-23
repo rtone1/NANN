@@ -24,3 +24,50 @@
   font-size: 38px;
   line-height: 48px;
 }
+
+/*LANDING CONTENT SECTIONS*/
+
+.content{
+  width: 95%;
+  height: 600px;
+  margin: 0px auto;
+  padding: 40px 0px 60px;
+  background: gray;
+}
+.ctaLarge{
+  float: left;
+  width: 32%;
+  margin-left: 2%;
+  background-color: #15539c;
+  border-radius: 20px;
+  text-align: center;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.ctaLarge:nth-child(1){
+  margin-left: 0px;
+}
+.ctaLarge h2{
+  width: 100%;
+  padding: 5px;
+  background-color: #BFD730;
+  color: #15539c;
+  border-radius: 20px 20px 0px 0px;
+}
+.ctaLarge img{
+  width: 50%;
+  display: block;
+  margin: 0px auto;
+}
+.ctaLarge a{
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 5px 30px;
+  border-radius: 15px;
+  background-color: #ef632f;
+  font-size: 18px;
+  letter-spacing: .5px
+}
+.ctaLarge a:hover{
+  background-color: #EE845C;
+  transition: .2s;
+}
