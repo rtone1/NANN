@@ -26,22 +26,32 @@
 }
 
 /*LANDING CONTENT SECTIONS*/
-
+.content::before,
+.content::after{
+  content: "";
+  display: table;
+}
+.content::after{
+  clear: both;
+}
 .content{
+  clear: both;
   width: 95%;
-  height: 600px;
   margin: 0px auto;
   padding: 40px 0px 60px;
-  background: gray;
 }
 .ctaLarge{
   float: left;
   width: 32%;
+  min-width: 240px;
   margin-left: 2%;
-  background-color: #15539c;
-  border-radius: 20px;
+  margin-bottom: 20px;
   text-align: center;
   font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.cta-back{
+  background-color: #15539c;
+  border-radius: 0px 0px 20px 20px;
 }
 .ctaLarge:nth-child(1){
   margin-left: 0px;
@@ -70,4 +80,123 @@
 .ctaLarge a:hover{
   background-color: #EE845C;
   transition: .2s;
+}
+
+/*NEWS FEED SECTION*/
+.newsFeed{
+  float: left;
+  clear: both;
+  width: 60%;
+  padding-right: 10px;
+}
+.newsFeed h1{
+  color: #15539c;
+  font-size: 32px;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.news{
+  padding: 10px 0px;
+  border-bottom: solid 2px #808080;
+  color: #7B6F67;
+  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
+}
+.news h2{
+  padding-bottom: 10px;
+  color: #4cb2b0;
+  font-size: 26px;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.news span>a,p{
+  font-size: 18px;
+  line-height: 28px;
+}
+.news span>a{
+  color: #ef632f;
+  text-decoration: underline;
+}
+
+/*ASIDE SECTION STYLES*/
+.asideRight{
+  float: right;
+  width: 40%;
+  padding-left: 10px;
+  background-color: lightgray;
+}
+.aside-cta{
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background: url("../../public/images/circles.png") #d3e268 no-repeat;
+  background-size: 180px;
+  background-position: right -40px bottom -100px;
+}
+.asideLogo{
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #4cb2b0;
+}
+.asideLogo img{
+  width: 200px;
+}
+.aside-cta-text{
+  padding: 20px 10px;
+}
+.aside-cta-text h2{
+  color: #15539c;
+  font-size: 28px;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.aside-cta-text p{
+  color: #7B6F67;
+  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
+}
+.aside-cta-text span>a{
+  color: #ef632f;
+  text-decoration: underline;
+}
+.needName{
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+.needName img{
+  float: left;
+  width: 180px;
+  height: 250px;
+}
+.needName article{
+  height: 250px;
+  padding: 0px 10px;
+  overflow: hidden;
+}
+.needName article h2{
+  color: #15539c;
+  font-size: 28px;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.needName article h3{
+  color: #565555;
+  font-size: 20px;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.needName article p{
+  color: #7B6F67;
+  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
+}
+.needName article span>a{
+  color: #ef632f;
+  text-decoration: underline;
+}
+/*.borderColors{
+  position: absolute;
+  bottom: 0px;
+}*/
+.borderColors div{
+  display: inline-block;
+  margin-left: 5px;
+  width: 30px;
+  height: 20px;
+  background-color: red;
+}
+.borderColors div:nth-child(1){
+  margin-left: 0px;
 }
