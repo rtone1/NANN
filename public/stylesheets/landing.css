@@ -120,7 +120,6 @@
   float: right;
   width: 40%;
   padding-left: 10px;
-  background-color: lightgray;
 }
 .aside-cta{
   margin-bottom: 40px;
@@ -153,20 +152,32 @@
   color: #ef632f;
   text-decoration: underline;
 }
+
+
 .needName{
   position: relative;
   height: 250px;
-  overflow: hidden;
+  /*overflow: hidden;*/
+}
+.needName .thumb{
+
 }
 .needName img{
   float: left;
-  width: 180px;
+  width: 35%;
+  max-width: 185px;
+}
+.needName .text{
   height: 250px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+.needName .textInfo{
+  height: 220px;
+  overflow: hidden;
 }
 .needName article{
   height: 250px;
-  padding: 0px 10px;
-  overflow: hidden;
 }
 .needName article h2{
   color: #15539c;
@@ -186,17 +197,20 @@
   color: #ef632f;
   text-decoration: underline;
 }
-/*.borderColors{
-  position: absolute;
-  bottom: 0px;
-}*/
+.borderColors{
+  position: relative;
+  width: 100%;
+  bottom: -10px;
+}
 .borderColors div{
   display: inline-block;
-  margin-left: 5px;
-  width: 30px;
+  margin-left: 2%;
   height: 20px;
-  background-color: red;
 }
 .borderColors div:nth-child(1){
   margin-left: 0px;
 }
+.borderColors div:nth-child(1){ width: 23%; background-color: #02b2af;}
+.borderColors div:nth-child(2){ width: 23%; background-color: #fbe444;}
+.borderColors div:nth-child(3){ width: 23%; background-color: #f16829;}
+.borderColors div:nth-child(4){ width: 23%; background-color: #01529a;}
