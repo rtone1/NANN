@@ -24,6 +24,10 @@
   font-size: 38px;
   line-height: 48px;
 }
+.ie8 .heroMain{
+  overflow: auto;
+  zoom: 1;
+}
 
 /*LANDING CONTENT SECTIONS*/
 .content::before,
@@ -40,6 +44,10 @@
   margin: 0px auto;
   padding: 40px 0px 60px;
 }
+.ie8 .content{
+  overflow: auto;
+  zoom: 1;
+}
 .ctaLarge{
   float: left;
   width: 32%;
@@ -48,6 +56,9 @@
   margin-bottom: 20px;
   text-align: center;
   font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.ie8 .ctaLarge:first-child{
+  margin-left: 0%;
 }
 .cta-back{
   background-color: #15539c;
@@ -117,7 +128,7 @@
 
 /*ASIDE SECTION STYLES*/
 .asideRight{
-  float: right;
+  float: left;
   width: 40%;
   padding-left: 10px;
 }
@@ -207,10 +218,7 @@
   margin-left: 2%;
   height: 20px;
 }
-.borderColors div:nth-child(1){
-  margin-left: 0px;
-}
-.borderColors div:nth-child(1){ width: 23%; background-color: #02b2af;}
-.borderColors div:nth-child(2){ width: 23%; background-color: #fbe444;}
-.borderColors div:nth-child(3){ width: 23%; background-color: #f16829;}
-.borderColors div:nth-child(4){ width: 23%; background-color: #01529a;}
+.borderColors .colorG{ width: 23%; margin-left: 0px; background-color: #02b2af;}
+.borderColors .colorY{ width: 23%; background-color: #fbe444;}
+.borderColors .colorO{ width: 23%; background-color: #f16829;}
+.borderColors .colorB{ width: 23%; background-color: #01529a;}
