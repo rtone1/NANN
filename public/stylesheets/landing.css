@@ -30,24 +30,6 @@
 }
 
 /*LANDING CONTENT SECTIONS*/
-.content::before,
-.content::after{
-  content: "";
-  display: table;
-}
-.content::after{
-  clear: both;
-}
-.content{
-  clear: both;
-  width: 95%;
-  margin: 0px auto;
-  padding: 40px 0px 60px;
-}
-.ie8 .content{
-  overflow: auto;
-  zoom: 1;
-}
 .ctaLarge{
   float: left;
   width: 32%;
@@ -168,10 +150,6 @@
 .needName{
   position: relative;
   height: 250px;
-  /*overflow: hidden;*/
-}
-.needName .thumb{
-
 }
 .needName img{
   float: left;

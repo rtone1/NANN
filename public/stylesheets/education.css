@@ -1,0 +1,84 @@
+.b-ct{
+  border-top: solid 2px gray;
+}
+
+
+/*ASIDE NAVIGATIONAL MENU*/
+.sideNav{
+  float: left;
+  width: 20%;
+  padding-right: 10px;
+}
+.sideNav ul{
+  list-style: none;
+}
+.mainList li{
+  padding: 5px 0px;
+  font-size: 18px;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.sideNav ul a:hover{
+  color: #EF632F;
+  transition: .2s;
+}
+.subList li{
+  margin-left: 20px;
+  font-weight: 100;
+  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
+}
+aside a{
+  color:  #15539c;
+}
+
+
+/*EDUCATION ARTICLE SECTION*/
+.artInfo{
+  float: right;
+  clear: both;
+  width: 80%;
+  padding-left: 10px;
+}
+.artInfo img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.art-ct{
+  clear: left;
+  margin-bottom: 10px;
+  padding: 10px 0px;
+  color: #7B6F67;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
+}
+.art-ct img{
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  float: left;
+}
+.art-ct ul{
+  padding: 20px 40px;
+}
+.art-ct h2{
+  margin-bottom: 10px;
+  color: #15539c;
+  font-size: 32px;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.art-ct h3{
+  margin-bottom: 10px;
+  color: #4cb2b0;
+  font-size: 22px;
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+
+.art-ct a{
+  display: inline-block;
+  margin: 10px 0px;
+  padding: 5px 30px;
+  background-color: #ef632f;
+  border-radius: 20px;
+}
