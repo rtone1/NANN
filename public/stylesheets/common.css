@@ -90,13 +90,16 @@ header{
 .nav-ct{
   padding: 0px 3%;
 }
-.nav-ct > a img.logo{
+.nav-ct  img.logo{
   float: left;
   width: 10%;
   min-width: 180px;
   max-width: 350px;
   height: auto;
   margin-top: 10px;
+}
+.ie8 .nav-ct .logo{
+  height: 90px;
 }
 
   .navTop{
@@ -140,6 +143,7 @@ header{
     right: 0px;
     width: 45px;
     height: 45px;
+    cursor: pointer;
     border-radius: 30px;
     background-color: #15539c;
     z-index: 2;
@@ -296,7 +300,6 @@ footer{
   box-shadow: 0px 0px 0px 3px  #fff;
   transition: .2s;
 }
-
 
 /*MEDIA QUERIES */
 
