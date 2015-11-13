@@ -22,6 +22,20 @@ $(function(){
         counter -= 1;
       }
     });
+
+    $(window).resize(function(){
+      if($(window).width() < 650){
+        $('.searchForm').css({ width: 90 + '%'});
+        $('.textSearch').css({ width: 90 + '%', opacity: 1 });
+      } else if ($(window).width() > 650) {
+        $('.searchForm').removeAttr('style');
+        $('.textSearch').removeAttr('style');
+      }
+      if(counter === 1 && $(window).width() > 650){
+        $(action).css({width: 250, opacity: 1});
+      }
+    });
+
   };
 
 }());
@@ -30,5 +44,4 @@ $(document).ready(function(){
 
   // CALL FUNTIONS ON DOM
   $.fn.searchMore( 0, $('.searchIcon'), $('.textSearch') );
-
 }); // END OF DOCUMENT READY

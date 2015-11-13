@@ -1,14 +1,18 @@
 /*REPEATED STYLES*/
+body{
+    color: #7B6F67;
+}
+.content p,
+.content a,
+.content ul{
+ font-size: 18px;
+ line-height: 28px;
+ font-family: OpenSans, Helvetica, 'Arial', sans-serif;
+}
 .heroMain,
 .content,
-.ctaLarge span{
+.cta a{
   font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
-}
- .content p,
- .content a{
-  font-size: 18px;
-  line-height: 28px;
-  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
 }
 .content span>a{
   color: #ef632f;
@@ -32,11 +36,12 @@
 .content h6{
   color: #15539c;
 }
-.newsFeed h2,
-.newsFeed h3,
-.newsFeed h4,
-.newsFeed h5,
-.newsFeed h6{
+.newsFeed article h1,
+.newsFeed article h2,
+.newsFeed article h3,
+.newsFeed article h4,
+.newsFeed article h5,
+.newsFeed article h6{
   color: #4cb2b0;
 }
 .content p{
@@ -44,31 +49,31 @@
 }
 
 /*MAIN HERO SECTION*/
-.heroMain::before,
-.heroMain::after{
-  content: "";
-  display: table;
-}
-.heroMain::after{
-  clear: both;
-}
-.heroMain{
-  clear: both;
-  width: 100%;
-  padding: 160px 30px;
-  background: url("../../public/images/heroMain.jpg") #fff no-repeat;
-  background-size: cover;
-}
-.heroMain h1{
-  float: right;
-  width: 430px;
-  font-size: 42px;
-  line-height: 52px;
-}
-.ie8 .heroMain{
-  overflow: auto;
-  zoom: 1;
-}
+  .heroMain::before,
+  .heroMain::after{
+    content: "";
+    display: table;
+  }
+  .heroMain::after{
+    clear: both;
+  }
+  .heroMain{
+    clear: both;
+    width: 100%;
+    padding: 160px 30px;
+    background: url("../../public/images/heroMain.jpg") #fff no-repeat;
+    background-size: cover;
+  }
+  .heroMain h1{
+    float: right;
+    width: 430px;
+    font-size: 42px;
+    line-height: 52px;
+  }
+  .ie8 .heroMain{
+    overflow: auto;
+    zoom: 1;
+  }
 
 /*CALL TO ACTION BUTTONS*/
 .ctaLarge{
@@ -111,25 +116,27 @@
 }
 
 /*NEWS FEED SECTION*/
-.newsFeed{
-  float: left;
-  clear: both;
-  width: 60%;
-  padding-right: 10px;
-}
-.newsFeed article{
-  padding: 10px 0px;
-  border-bottom: solid 2px #808080;
-}
-.newsFeed h1{
-  font-size: 32px;
-}
-.newsFeed h2{
-  padding-bottom: 5px;
-  color: #4cb2b0;
-  font-size: 28px;
-}
-
+  .newsFeed{
+    float: left;
+    clear: both;
+    width: 60%;
+    padding-right: 10px;
+  }
+  .newsFeed article{
+    padding: 10px 0px;
+    border-bottom: solid 2px #808080;
+  }
+  .newsFeed h1{
+    font-size: 32px;
+  }
+  .newsFeed article h2{
+    padding-bottom: 5px;
+    font-size: 28px;
+  }
+  .newsFeed ul{
+    padding: 20px 40px;
+    color: #7B6F67;
+  }
 
 /*ASIDE CALL TO ACTION SECTION*/
 .asideRight{
@@ -159,48 +166,7 @@
   font-size: 28px;
 }
 
-
-
-
-/*.asidePost{
-  position: relative;
-  height: 250px;
-}
-.asidePost img{
-  float: left;
-  width: 35%;
-  max-width: 185px;
-}
-.asidePost .text{
-  height: 250px;
-  overflow: hidden;
-  padding-left: 10px;
-}
-.asidePost .textInfo{
-  height: 220px;
-  overflow: hidden;
-}
-.asidePost article{
-  height: 250px;
-}
-.asidePost article h2{
-  font-size: 28px;
-}
-.asidePost article h3{
-  color: #565555;
-  font-size: 20px;
-}
-.borderColors{
-  position: relative;
-  width: 100%;
-  bottom: -10px;
-}
-.borderColors div{
-  display: inline-block;
-  margin-left: 2%;
-  height: 20px;
-}
-*/
+/*ASIDE POST CONTENT*/
 .asidePost::before,
 .asidePost::after{
   content: "";
@@ -269,7 +235,8 @@
     font-size: 20px;
   }
   .content p,
-  .content a{
+  .content a,
+  .content ul{
     font-size: 16px;
   }
 }
@@ -287,7 +254,8 @@
     font-size: 18px;
   }
   .content p,
-  .content a{
+  .content a,
+  .content ul{
     font-size: 14px;
     line-height: 26px;
   }
