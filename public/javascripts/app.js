@@ -26,7 +26,7 @@ $(function(){
     $(window).resize(function(){
       if($(window).width() < 650){
         $('.searchForm').css({ width: 90 + '%'});
-        $('.textSearch').css({ width: 90 + '%', opacity: 1 });
+        $('.textSearch').css({ width: 100 + '%', opacity: 1 });
       } else if ($(window).width() > 650) {
         $('.searchForm').removeAttr('style');
         $('.textSearch').removeAttr('style');

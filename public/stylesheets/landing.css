@@ -1,53 +1,3 @@
-/*REPEATED STYLES*/
-body{
-    color: #7B6F67;
-}
-.content p,
-.content a,
-.content ul{
- font-size: 18px;
- line-height: 28px;
- font-family: OpenSans, Helvetica, 'Arial', sans-serif;
-}
-.heroMain,
-.content,
-.cta a{
-  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
-}
-.content span>a{
-  color: #ef632f;
-  text-decoration: underline;
-}
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6{
-  line-height: 1.2em;
-  margin: 0px 0px 5px;
-}
-.heroMain,
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6{
-  color: #15539c;
-}
-.newsFeed article h1,
-.newsFeed article h2,
-.newsFeed article h3,
-.newsFeed article h4,
-.newsFeed article h5,
-.newsFeed article h6{
-  color: #4cb2b0;
-}
-.content p{
-  color: #7B6F67;
-}
-
 /*MAIN HERO SECTION*/
   .heroMain::before,
   .heroMain::after{
@@ -68,11 +18,14 @@ body{
     float: right;
     width: 430px;
     font-size: 42px;
-    line-height: 52px;
+    line-height: 1.4em;
   }
   .ie8 .heroMain{
     overflow: auto;
     zoom: 1;
+  }
+  .heroMain img{
+    display: none;
   }
 
 /*CALL TO ACTION BUTTONS*/
@@ -83,9 +36,13 @@ body{
   margin-left: 2%;
   margin-bottom: 20px;
   text-align: center;
+  text-transform: uppercase;
 }
 .ctaLarge:first-child{
   margin-left: 0%;
+}
+.ctaLarge:last-child{
+  display: none;
 }
 .ctaLarge div{
   padding: 0px 0px 30px;
@@ -126,12 +83,8 @@ body{
     padding: 10px 0px;
     border-bottom: solid 2px #808080;
   }
-  .newsFeed h1{
-    font-size: 32px;
-  }
   .newsFeed article h2{
     padding-bottom: 5px;
-    font-size: 28px;
   }
   .newsFeed ul{
     padding: 20px 40px;
@@ -142,6 +95,7 @@ body{
 .asideRight{
   float: left;
   width: 40%;
+  min-width: 247px;
   padding-left: 10px;
 }
 .aside-cta{
@@ -162,9 +116,7 @@ body{
 .aside-cta-text{
   padding: 20px 10px;
 }
-.aside-cta-text h2{
-  font-size: 28px;
-}
+
 
 /*ASIDE POST CONTENT*/
 .asidePost::before,
@@ -193,12 +145,8 @@ body{
   float: right;
   width: 62%;
 }
-.asidePost h2{
-  font-size: 28px;
-}
 .asidePost h3{
   color: #565555;
-  font-size: 20px;
 }
 
 .borderColors div{
@@ -221,7 +169,6 @@ body{
   .heroMain h1{
     width: 400px;
     font-size: 38px;
-    line-height: 48px;
     transition: .2s;
   }
 }
@@ -229,7 +176,6 @@ body{
   .heroMain h1{
     width: 330px;
     font-size: 32px;
-    line-height: 42px;
   }
   .ctaLarge h2{
     font-size: 20px;
@@ -248,23 +194,102 @@ body{
   .heroMain h1{
     width: 280px;
     font-size: 28px;
-    line-height: 38px;
   }
   .ctaLarge h2{
     font-size: 18px;
-  }
-  .content p,
-  .content a,
-  .content ul{
-    font-size: 14px;
-    line-height: 26px;
   }
   .ctaLarge span{
     line-height: 20px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
+  .heroMain{
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    background-image: none;
+  }
+  .heroMain img{
+    display: block;
+    width: 100%;
+  }
+  .heroMain h1{
+    position: absolute;
+    bottom: 0px;
+    float: none;
+    width: 100%;
+    padding:  0px 30px 10px;
+    font-size: 32px;
+  }
+/*---CALL TO ACTION BUTTONS MOBILE---*/
+  .ctaLarge{
+    float: none;
+    width: 100%;
+    min-width: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .ctaLarge:last-child{
+    display: block;
+    text-align: center;
+  }
+  .ctaLarge div{
+    float: none;
+    width: 10%;
+    height: 80px;
+    padding: 0px 0px;
+    background-color: #BFD730;
+    border-radius: 10px 0px 0px 10px;
+  }
+  .ctaLarge:last-child div{
+    display: none;
+  }
+  .ctaLarge img{
+    display: none;
+  }
   .ctaLarge h2{
-    font-size: 14px;
+    float: right;
+    width: 90%;
+    padding: 26px 0px 26px 5%;
+    margin: 0px;
+    background-color: #15539c;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 24px;
+    color: #fff;
+  }
+  .ctaLarge:last-child h2{
+    width: 100%;
+    padding: 26px 0px 26px 0px;
+    border-radius: 10px;
+    background-color: #4cb2b0;
+    margin-bottom: 20px;
+  }
+  .ctaLarge span{
+    display: none;
+  }
+/*---NEWS FEED MOBILE---*/
+  .newsFeed{
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .asideRight{
+    width: 100%;
+    padding-left: 0px;
+  }
+  .aside-cta{
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 550px) {
+  .heroMain h1{
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .heroMain h1{
+    font-size: 18px;
+    padding:  0px 10px 10px;
   }
 }

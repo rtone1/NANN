@@ -13,6 +13,12 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+html {
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
 article,
 aside,
 details,
@@ -40,9 +46,17 @@ a img{
   outline: none;
 }
 
+img {
+  border: 0;
+}
+
 b,
 strong {
   font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
 }
 
 @font-face {
@@ -56,13 +70,64 @@ strong {
 
 /*REPEATED STYLES*/
 body{
-  max-width: 2600px;
+  /*max-width: 2600px;*/
+  color: #7B6F67;
 }
 .page-ctn{
   width: 100%;
 }
-header{
-  position: relative;
+.content p,
+.content a,
+.content ul{
+ font-size: 18px;
+ line-height: 1.6em;
+ font-family: OpenSans, Helvetica, 'Arial', sans-serif;
+}
+.heroMain,
+.content,
+.cta a{
+  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.content span>a{
+  color: #ef632f;
+  text-decoration: underline;
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6{
+  line-height: 1.2em;
+  margin: 0px 0px 5px;
+}
+.heroMain,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6{
+  color: #15539c;
+}
+
+.content h1{ font-size: 32px; }
+.content h2{ font-size: 28px; }
+.content h3{ font-size: 20px; }
+.content h4{ font-size: 18px; }
+.content h5{ font-size: 16px; }
+.content h6{ font-size: 14px; }
+
+.newsFeed article h1,
+.newsFeed article h2,
+.newsFeed article h3,
+.newsFeed article h4,
+.newsFeed article h5,
+.newsFeed article h6{
+  color: #4cb2b0;
+}
+.content p{
+  color: #7B6F67;
 }
 /*HEADER AND NAVIGATION*/
 
@@ -75,6 +140,7 @@ header::after{
   clear: both;
 }
 header{
+  position: relative;
   clear: both;
   width: 100%;
   padding-bottom: 10px;
@@ -152,7 +218,7 @@ header{
     width: 45px;
     height: 45px;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 100%;
     background-color: #15539c;
     z-index: 2;
   }
@@ -166,7 +232,7 @@ header{
     width: 60%;
     height: 60%;
     border: solid 4px #BFD730;
-    border-radius: 20px;
+    border-radius: 100%;
   }
   .line{
     top: 6%;
@@ -185,11 +251,12 @@ header{
   display: inline-block;
   vertical-align: top;
 }
+
 input[type=text]{
   opacity: 0;
   height: 45px;
   width: 45px;
-  padding: 5px 10px;
+  padding: 5px 40px 5px 10px;
   border: solid 1px transparent;
   border-radius: 30px;
 
@@ -210,7 +277,6 @@ input[type=image]{
     clear: right;
     float: right;
     margin-top: 10px;
-    font-size: 0px;
     font-family: OpenSansBold, 'Open Sans', 'Arial', sans-serif;
   }
   .mainNav ul li{
@@ -237,6 +303,10 @@ input[type=image]{
 }
 
 /*CONTAINER FOR PAGES CONTENT*/
+
+.border{
+  border-top: solid 2px gray;
+}
   .content::before,
   .content::after{
     content: "";
@@ -280,22 +350,25 @@ footer{
 }
 address{
   float: left;
-  margin-top: 20px;
   font-size: 16px;
 }
 .socialMedia{
   float: right;
+  width: 40%;
+  min-width: 270px;
+  text-align: right;
 }
 .socialMedia ul li{
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 2%;
+  width: 10%;
+  min-width: 45px;
 }
 .socialMedia ul li:nth-child(1){
   margin-left: 0px;
 }
 .socialMedia img{
-  width: 50px;
-  height: 50px;
+  width: 100%;
   border-radius: 100%;
 }
 .socialMedia img:hover{
@@ -305,6 +378,132 @@ address{
 
 
 /*MEDIA QUERIES FOR COMMON CONTENT*/
+@media only screen and (min-width: 1600px) {
+  .content h1{ font-size: 84px; }
+  .content h2{ font-size: 74px; }
+  .content h3{ font-size: 50px; }
+  .content h4{ font-size: 38px; }
+  .content h5{ font-size: 36px; }
+  .content h6{ font-size: 34px; }
+
+  .content p,
+  .content a,
+  .content ul{
+   font-size: 32px;
+  }
+
+  .headerBorder {
+    height: 45px;
+  }
+  .navTop{
+    padding: 7px 30px 20px;
+  }
+
+  .navTop div.navlist {
+    font-size: 28px;
+  }
+
+  .mainNav {
+    margin-top: 20px;
+
+    }
+
+  .mainNav ul li a {
+    font-size: 28px;
+  }
+
+  .searchIcon{
+    width: 70px;
+    height: 70px;
+  }
+  .line{
+    top: 10%;
+  }
+  input[type=text]{
+    height: 70px;
+    width: 70px;
+    font-size: 24px;
+    border-radius: 35px;
+  }
+
+  .mainNav ul li a:hover{
+    border-bottom: solid 6px #ef632f;
+  }
+
+  .border{
+    border-top: solid 4px gray;
+  }
+
+  footer address{
+    font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 2600px) {
+  .content h1{ font-size: 98px; }
+  .content h2{ font-size: 84px; }
+  .content h3{ font-size: 60px; }
+  .content h4{ font-size: 48px; }
+  .content h5{ font-size: 46px; }
+  .content h6{ font-size: 44px; }
+
+  .content p,
+  .content a,
+  .content ul{
+   font-size: 48px;
+  }
+  .headerBorder {
+    height: 55px;
+  }
+  .navTop{
+    padding: 14px 30px 35px;
+  }
+
+  .navTop div.navlist {
+    font-size: 34px;
+  }
+
+  .mainNav {
+    margin-top: 20px;
+
+    }
+
+  .mainNav ul li a {
+
+    font-size: 34px;
+}
+
+  .searchIcon{
+    width: 80px;
+    height: 80px;
+  }
+  .line{
+    top: 12%;
+  }
+  input[type=text]{
+    height: 80px;
+    width: 80px;
+    font-size: 32px;
+    border-radius: 40px;
+  }
+
+  .mainNav ul li a:hover{
+    border-bottom: solid 8px #ef632f;
+  }
+
+  .border{
+    border-top: solid 6px gray;
+  }
+
+  footer address{
+    font-size: 48px;
+  }
+
+  .socialMedia img:hover{
+    box-shadow: 0px 0px 0px 9px  #fff;
+  }
+
+}
 @media only screen and (max-width: 1200px) {
 
 }
@@ -345,6 +544,11 @@ address{
   }
   .mainNav ul li a{
     font-size: 12px;
+  }
+  .content p,
+  .content a,
+  .content ul{
+    font-size: 16px;
   }
 }
 
@@ -402,7 +606,7 @@ address{
     height: 5px;
     width: 100%;
     margin-top: 8px;
-    background-color: orange;
+    background-color: #ef632f;
     border-radius: 2px;
   }
   .hamIcon div:first-child{
@@ -427,7 +631,7 @@ address{
   }
   input[type=text]{
     opacity: 1;
-    width: 90%;
+    width: 100%;
     margin-left: -5px;
     border-radius: 5px;
     border: solid 1px gray;
@@ -437,15 +641,13 @@ address{
   input[type=text]:active,
   input[type=text]:focus{
   outline: 0;
-
   }
   input[type=image]{
     display: inline-block;
     width: 30px;
     height: auto;
     margin-left: -39px;
-    margin-top: 3px;
-    background-color: white;
+    margin-top: 5px;
     border-radius: 0px 5px 5px 0px;
   }
   input[type=image]:active,
@@ -464,15 +666,31 @@ address{
   address{
     float: none;
     font-size: 16px;
+    margin-top: 20px;
   }
   .socialMedia{
     float: none;
+    text-align: center;
+    margin: 0px auto;
   }
 }
 
-@media only screen and (max-width: 550px) {}
+@media only screen and (max-width: 550px) {
+  .content p,
+  .content a,
+  .content ul{
+    font-size: 14px;
+  }
+}
 
 @media only screen and (max-width: 450px) {
+  .content h1{ font-size: 28px; }
+  .content h2{ font-size: 24px; }
+  .content h3{ font-size: 20px; }
+  .content h4{ font-size: 18px; }
+  .content h5{ font-size: 16px; }
+  .content h6{ font-size: 14px; }
+
   .navTop ul li{
     margin-left: 5%;
     font-size: 12px;

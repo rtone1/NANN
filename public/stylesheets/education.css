@@ -1,20 +1,17 @@
-.b-ct{
-  border-top: solid 2px gray;
-}
+
 
 
 /*ASIDE NAVIGATIONAL MENU*/
 .sideNav{
   float: left;
   width: 20%;
-  padding-right: 10px;
+  padding-right: 1%;
 }
 .sideNav ul{
   list-style: none;
 }
 .mainList li a{
   padding: 5px 0px;
-  font-size: 18px;
   font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
 }
 .sideNav ul a{
@@ -24,8 +21,10 @@
   color: #EF632F;
   transition: .2s;
 }
+.subList li{
+  margin-left: 8%;
+}
 .subList li a{
-  margin-left: 20px;
   font-weight: 100;
   font-family: OpenSans, Helvetica, 'Arial', sans-serif;
 }
@@ -39,13 +38,12 @@ aside a{
   float: right;
   clear: both;
   width: 80%;
-  padding-left: 10px;
+  padding-left: 1%;
 }
-.artInfo img{
+.artInfo > img{
   width: 100%;
   height: auto;
-  padding: 10px 0px;
-  margin-bottom: 10px;
+  margin: 10px 0px 30px;
 }
 .artInfo article::before,
 .artInfo article::after{
@@ -60,41 +58,41 @@ aside a{
 }
 .art-ct{
   clear: left;
-  margin-bottom: 10px;
-  padding: 10px 0px;
+  margin-bottom: 20px;
   color: #7B6F67;
-  font-size: 16px;
-  line-height: 28px;
   font-family: OpenSans, Helvetica, 'Arial', sans-serif;
 }
-.art-ct > img{
+.artInfo article > img{
   width: 30%;
-  max-width: 300px;
+  min-width: 130px;
   height: auto;
-  margin: 0px 20px 0px 0px;
-  float: left;
 }
-.art-ct > img:nth-child(even){
-  margin: 0px 0px 0px 20px;
+.left{
+  float: left;
+  margin: 10px 2% 10px 0px;
+}
+.right{
   float: right;
+  margin: 10px 0px 10px 2% ;
 }
 .art-ct ul{
-  padding: 20px 40px;
+  padding: 20px 5%;
 }
-.art-ct h1{
-  font-size: 36px;
-}
+
 .art-ct h2{
   margin-bottom: 10px;
   color: #15539c;
-  font-size: 32px;
   font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
 }
 .art-ct h3{
   margin: 10px 0px;
   color: #4cb2b0;
-  font-size: 22px;
   font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
+}
+.art-ct h4,
+.art-ct h5,
+.art-ct h6{
+  color: #565555;
 }
 
 .art-ct a{
@@ -108,3 +106,50 @@ aside a{
   background-color: #EE845C;
   transition: .2s;
 }
+
+@media only screen and (min-width: 1600px) {
+  .art-ct{
+    margin-bottom: 40px;
+  }
+  .art-ct a {
+    margin: 30px 0px;
+    border-radius: 30px;
+  }
+  .art-ct h2 {
+    margin-bottom: 20px;
+  }
+  .art-ct ul {
+    padding: 40px 5%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .sideNav{
+    display: none;
+  }
+  .border{
+    border: none;
+  }
+  .artInfo{
+    float: none;
+    width: 100%;
+    padding: 0px;
+  }
+  .artInfo > img{
+    padding: 0px;
+    margin: 0px;
+  }
+  .artInfo article{
+    margin: 30px 0px;
+    padding: 0px 10px;
+  }
+  .content{
+    width: 100%;
+    margin: 0px;
+    padding: 0px 0px 60px;
+  }
+}
+
+@media only screen and (max-width: 550px) {}
+
+@media only screen and (max-width: 450px) {}
