@@ -77,14 +77,11 @@
     float: left;
     clear: both;
     width: 60%;
-    padding-right: 10px;
+    padding-right: 1%;
   }
   .newsFeed article{
     padding: 10px 0px;
     border-bottom: solid 2px #808080;
-  }
-  .newsFeed article h2{
-    padding-bottom: 5px;
   }
   .newsFeed ul{
     padding: 20px 40px;
@@ -96,7 +93,7 @@
   float: left;
   width: 40%;
   min-width: 247px;
-  padding-left: 10px;
+  padding-left: 1%;
 }
 .aside-cta{
   margin-bottom: 40px;
@@ -111,7 +108,8 @@
   background-color: #4cb2b0;
 }
 .asideLogo img{
-  width: 200px;
+  width: 50%;
+  min-width: 150px;
 }
 .aside-cta-text{
   padding: 20px 10px;
@@ -133,7 +131,7 @@
 .asidePost img{
   float: left;
   width: 35%;
-  max-width: 185px;
+  max-width: 280px;
 }
 .asidePost .textInfo{
   height: 230px;
@@ -160,7 +158,67 @@
 .borderColors .colorB{ width: 23.5%; background-color: #01529a;}
 
 
+.imageZoom{
+  position: fixed;
+  top: 32%;
+  width: 90%;
+  margin: 0px;
+  left: 5%;
+}
 /*MEDIA QUERIES FOR LANDING CONTENT*/
+@media only screen and (min-width: 1600px) {
+    .content {
+      padding: 80px 0px 120px;
+    }
+    .heroMain{
+      padding: 200px 30px;
+    }
+    .heroMain h1 {
+        width: 690px;
+        font-size: 68px;
+        transition: .2s;
+    }
+    .ctaLarge{
+      margin-bottom: 40px;
+    }
+    .ctaLarge h2{
+      font-size: 48px;
+    }
+    .ctaLarge span {
+      padding: 15px 40px;
+      border-radius: 30px;
+   }
+   .aside-cta{
+      margin-bottom: 60px;
+      background-size: 280px;
+      background-position: right -80px bottom -150px;
+   }
+}
+
+@media only screen and (min-width: 2600px) {
+    .heroMain{
+      padding: 300px 60px;
+    }
+    .heroMain h1 {
+        width: 990px;
+        font-size: 98px;
+    }
+    .ctaLarge h2{
+      font-size: 68px;
+    }
+    .ctaLarge span {
+      padding: 20px 60px;
+      border-radius: 30px;
+   }
+   .aside-cta{
+      background-size: 380px;
+      background-position: right -100px bottom -200px;
+   }
+   .asidePost img {
+      max-width: 350px;
+   }
+}
+
 @media only screen and (max-width: 1200px) {
   .heroMain{
     background-size: contain;
@@ -179,11 +237,6 @@
   }
   .ctaLarge h2{
     font-size: 20px;
-  }
-  .content p,
-  .content a,
-  .content ul{
-    font-size: 16px;
   }
 }
 

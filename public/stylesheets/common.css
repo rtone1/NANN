@@ -59,6 +59,17 @@ dfn {
   font-style: italic;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 20px 5%;
+}
+
+td,
+th {
+  padding: 0;
+}
+
 @font-face {
   font-family: OpenSans;
   src: url('../../public/fonts/OPENSANS.TTF') format('truetype');
@@ -78,7 +89,8 @@ body{
 }
 .content p,
 .content a,
-.content ul{
+.content ul,
+.content table{
  font-size: 18px;
  line-height: 1.6em;
  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
@@ -99,7 +111,7 @@ body{
 .content h5,
 .content h6{
   line-height: 1.2em;
-  margin: 0px 0px 5px;
+  margin: 0px 0px 10px;
 }
 .heroMain,
 .content h1,
@@ -259,7 +271,6 @@ input[type=text]{
   padding: 5px 40px 5px 10px;
   border: solid 1px transparent;
   border-radius: 30px;
-
   box-shadow: none;
   font-size: 18px;
   font-family: OpenSans, Helvetica, Arial, sans-serif;
@@ -294,19 +305,52 @@ input[type=image]{
     border-bottom: solid 4px #ef632f;
   }
 /*ACTIVE LICK STYLES*/
-
+.mainNav .mainActive{
+  border-bottom: solid 4px #EF632F;
+}
+.mainNav .mainActive:hover{
+  border-bottom: solid 4px #EE845C;
+}
 .activeLink{
   border-bottom: solid 2px #EF632F;
 }
 .subLink{
   color: #EF632F;
 }
+.black{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.9);
+  z-index: 500;
+}
+
 
 /*CONTAINER FOR PAGES CONTENT*/
 
 .border{
   border-top: solid 2px gray;
 }
+.content p{
+  margin-bottom: 10px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+th{
+  text-transform: uppercase;
+}
+
   .content::before,
   .content::after{
     content: "";
@@ -379,18 +423,20 @@ address{
 
 /*MEDIA QUERIES FOR COMMON CONTENT*/
 @media only screen and (min-width: 1600px) {
-  .content h1{ font-size: 84px; }
-  .content h2{ font-size: 74px; }
-  .content h3{ font-size: 50px; }
-  .content h4{ font-size: 38px; }
-  .content h5{ font-size: 36px; }
-  .content h6{ font-size: 34px; }
+  .content h1{ font-size: 58px; }
+  .content h2{ font-size: 48px; }
+  .content h3{ font-size: 40px; }
+  .content h4{ font-size: 28px; }
+  .content h5{ font-size: 26px; }
+  .content h6{ font-size: 24px; }
 
   .content p,
   .content a,
-  .content ul{
-   font-size: 32px;
+  .content ul,
+  .content table{
+   font-size: 28px;
   }
+
 
   .headerBorder {
     height: 45px;
@@ -400,34 +446,29 @@ address{
   }
 
   .navTop div.navlist {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .mainNav {
     margin-top: 20px;
-
-    }
+  }
 
   .mainNav ul li a {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .searchIcon{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   .line{
     top: 10%;
   }
   input[type=text]{
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     font-size: 24px;
     border-radius: 35px;
-  }
-
-  .mainNav ul li a:hover{
-    border-bottom: solid 6px #ef632f;
   }
 
   .border{
@@ -435,22 +476,23 @@ address{
   }
 
   footer address{
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
 @media only screen and (min-width: 2600px) {
-  .content h1{ font-size: 98px; }
-  .content h2{ font-size: 84px; }
-  .content h3{ font-size: 60px; }
-  .content h4{ font-size: 48px; }
-  .content h5{ font-size: 46px; }
-  .content h6{ font-size: 44px; }
+  .content h1{ font-size: 78px; }
+  .content h2{ font-size: 68px; }
+  .content h3{ font-size: 50px; }
+  .content h4{ font-size: 38px; }
+  .content h5{ font-size: 36px; }
+  .content h6{ font-size: 34px; }
 
   .content p,
   .content a,
-  .content ul{
-   font-size: 48px;
+  .content ul,
+  .content table{
+   font-size: 38px;
   }
   .headerBorder {
     height: 55px;
@@ -460,7 +502,7 @@ address{
   }
 
   .navTop div.navlist {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .mainNav {
@@ -470,7 +512,7 @@ address{
 
   .mainNav ul li a {
 
-    font-size: 34px;
+    font-size: 32px;
 }
 
   .searchIcon{
@@ -483,10 +525,14 @@ address{
   input[type=text]{
     height: 80px;
     width: 80px;
+    padding: 10px 50px 10px 20px;
     font-size: 32px;
     border-radius: 40px;
   }
 
+  .mainNav ul li a{
+    border-bottom: solid 8px #fff;
+  }
   .mainNav ul li a:hover{
     border-bottom: solid 8px #ef632f;
   }
@@ -547,7 +593,8 @@ address{
   }
   .content p,
   .content a,
-  .content ul{
+  .content ul,
+  .content table{
     font-size: 16px;
   }
 }
@@ -678,7 +725,8 @@ address{
 @media only screen and (max-width: 550px) {
   .content p,
   .content a,
-  .content ul{
+  .content ul,
+  .content table{
     font-size: 14px;
   }
 }
