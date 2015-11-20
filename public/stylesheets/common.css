@@ -15,8 +15,8 @@
 }
 
 html {
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 article,
@@ -81,12 +81,14 @@ th {
 
 /*REPEATED STYLES*/
 body{
-  /*max-width: 2600px;*/
   color: #7B6F67;
+  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
 }
 .page-ctn{
   width: 100%;
+  background-color: #fff;
 }
+
 .content p,
 .content a,
 .content ul,
@@ -165,12 +167,13 @@ header{
 .headerBorder{
   height: 35px;
   width: 100%;
-  padding: 0px 3%;
+  /*padding: 0px 3%;*/
   background-color: #429fac;
 }
 
 .nav-ct{
-  padding: 0px 3%;
+  /*padding: 0px 3%;*/
+  margin: 0px 3%;
 }
 .nav-ct  img{
   float: left;
@@ -189,10 +192,13 @@ header{
     position: relative;
     display: inline-block;
     float: right;
+    margin-right:  3%;
     padding: 7px 10px 20px;
     background-color: #BFD730;
     border-radius: 0px 0px 20px 20px;
     -ms-border-radius: 0px 0px 20px 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
   }
   .navTop div.navlist{
     display: inline-block;
@@ -230,11 +236,17 @@ header{
     width: 45px;
     height: 45px;
     cursor: pointer;
-    border-radius: 100%;
+    background: url("../../public/images/searchIconDesk.png") center center no-repeat;
+    background-size: 80%;
     background-color: #15539c;
     z-index: 2;
+    border-radius: 100%;
+    -ms-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100px;
+    -o-border-radius: 100%;
   }
-  .circle,
+  /*.circle,
   .line{
     position: relative;
   }
@@ -245,6 +257,10 @@ header{
     height: 60%;
     border: solid 4px #BFD730;
     border-radius: 100%;
+    -ms-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100px;
+    -o-border-radius: 100%;
   }
   .line{
     top: 6%;
@@ -252,12 +268,12 @@ header{
     width: 40%;
     border: solid 4px #BFD730;
     border-radius: 4px 2px 2px 4px;
+    transform: rotate(50deg);
     -ms-transform: rotate(50deg);
     -webkit-transfrom: rotate(50deg);
     -moz-transfrom: rotate(50deg);
     -o-transfrom: rotate(50deg);
-    transform: rotate(50deg);
-  }
+  }*/
 
 .searchForm{
   display: inline-block;
@@ -268,13 +284,19 @@ input[type=text]{
   opacity: 0;
   height: 45px;
   width: 45px;
-  padding: 5px 40px 5px 10px;
+  padding: 0px 40px 0px 10px;
+  background-color: #fff;
   border: solid 1px transparent;
-  border-radius: 30px;
   box-shadow: none;
   font-size: 18px;
   font-family: OpenSans, Helvetica, Arial, sans-serif;
+  border-radius: 30px;
+  -ms-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -o-border-radius: 30px;
 }
+
 input[type=text]:active,
 input[type=text]:focus{
 outline: 0;
@@ -288,6 +310,7 @@ input[type=image]{
     clear: right;
     float: right;
     margin-top: 10px;
+    text-transform: uppercase;
     font-family: OpenSansBold, 'Open Sans', 'Arial', sans-serif;
   }
   .mainNav ul li{
@@ -364,6 +387,7 @@ th{
     width: 95%;
     margin: 0px auto;
     padding: 40px 0px 60px;
+    background-color: white;
   }
   .ie8 .content{
     overflow: auto;
@@ -382,7 +406,7 @@ footer::after{
 footer{
   clear: both;
   width: 100%;
-  padding: 30px 5% 50px;
+  padding: 30px 0px 50px;
   background-color: #15539c;
   font-size: 18px;
   font-family: OpenSansBold, 'Arial', sans-serif;
@@ -395,11 +419,13 @@ footer{
 address{
   float: left;
   font-size: 16px;
+  margin-left: 5%;
 }
 .socialMedia{
   float: right;
   width: 40%;
   min-width: 270px;
+  margin-right: 5%;
   text-align: right;
 }
 .socialMedia ul li{
@@ -414,6 +440,10 @@ address{
 .socialMedia img{
   width: 100%;
   border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-border-radius: 100%;
 }
 .socialMedia img:hover{
   box-shadow: 0px 0px 0px 3px  #fff;
@@ -471,12 +501,17 @@ address{
     border-radius: 35px;
   }
 
+
+
   .border{
     border-top: solid 4px gray;
   }
 
   footer address{
     font-size: 28px;
+  }
+  .socialMedia img:hover{
+    box-shadow: 0px 0px 0px 6px  #fff;
   }
 }
 
@@ -599,7 +634,7 @@ address{
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 655px) {
   /*----PAGE HEADER MOBILE STYLES----*/
   header{
     padding: 10px 0px 0px;
@@ -622,6 +657,7 @@ address{
     .navTop{
       width: 100%;
       padding: 0px;
+      margin: 0px;
       background-color: #fff;
       border-radius: 0px;
     }
@@ -706,6 +742,33 @@ address{
       float: none;
       display: none;
     }
+    .mainNav ul li{
+      display: block;
+      text-align: left;
+    }
+    .mainNav .mainActive{
+      border: none;
+    }
+    .mainNav .mainActive:hover{
+      border: none;
+    }
+    .mainNav ul li a{
+      display: block;
+      padding: 10px 20px;
+      border-bottom: none;
+      color: inherit;
+      font-size: 14px;
+    }
+    .mainNav ul a{
+      display: block;
+      padding: 10px 20px;
+      border-bottom: none;
+      color: inherit;
+      font-size: 14px;
+    }
+    .mainNav ul li a:hover{
+      border-bottom: 0px;
+    }
   /*----PAGE FOOTER MOBILE STYLES----*/
   footer{
     text-align: center;
@@ -714,6 +777,7 @@ address{
     float: none;
     font-size: 16px;
     margin-top: 20px;
+    margin-left: 0px;
   }
   .socialMedia{
     float: none;

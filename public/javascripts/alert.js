@@ -36,7 +36,7 @@ var alertCreate = function(){
 // FUNCTION ALERT FOR USERS USING OlDER BROWSERS
   var updateBrowser = function(){
     var sUsrAg = navigator.userAgent;
-     if (sUsrAg.indexOf("Firefox/41.0") > -1) { return true; }
+     if (sUsrAg.indexOf("Firefox/42.0") > -1) { return true; }
      else if (sUsrAg.indexOf("Chrome/46.0") > -1){ return true; }
      else if (sUsrAg.indexOf("Version/9.0 Safari") > -1){ return true; }
      else if (sUsrAg.indexOf("OPR/32.0") > -1){ return true; }

@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="../public/stylesheets/common.css" media="screen">
     <link rel="stylesheet" href="../public/stylesheets/education.css" media="screen" >
     <link rel="stylesheet" href="../public/stylesheets/animations.css" media="screen">
+        <link rel="stylesheet" href="../public/stylesheets/lib/jquery.mmenu.css" media="screen" >
   </head>
   <body>
+    <div class="wrapper">
     <div class="back"></div>
 
 
@@ -30,17 +32,17 @@
               <li><a href="#" target="_self">STORE</a></li>
               <li><a href="#" target="_self">CONTACT</a></li>
               <li><a href="#" target="_self">LOGIN</a></li>
-              <li><div class="hamIcon">
+              <li><a href="#mobile-menu"><div class="hamIcon">
                     <div></div>
                     <div></div>
                     <div></div>
-                  </div>
+                  </div></a>
               </li>
             </ul>
           </div>
           <div class="search">
             <form class="searchForm" action="index.html" name="" method="post">
-              <input class="textSearch" type="text" name="name" placeholder="search...">
+              <input class="textSearch" type="text" placeholder="search...">
               <input type="image" src="../public/images/searchIcon.png" alt="Submit">
             </form>
             <div class="searchIcon" title="click to search">
@@ -52,7 +54,7 @@
       </div>
       <div class="nav-ct">
         <a href="#"><img src="../public/images/nannLogo.png" alt="National Association of Neonatal Nurses logo." title="National Association of Neonatal Nurses"/></a>
-        <nav class="mainNav">
+        <nav class="mainNav" id="mobile-menu">
           <ul>
             <li><a href="file:///Users/teresatorres/dev/wdi/NANN/views/index.html">ABOUT</a></li>
             <li><a href="#">MEMBERSHIP</a></li>
@@ -149,9 +151,9 @@
 
         <aside class="sideNav">
           <nav>
-            <ul class="mainList">
+            <ul>
               <li><a class="activeLink" href="#">Annual Meeting</a>
-                <ul class="subList">
+                <ul>
                   <li><a href="#">Registration</a></li>
                   <li><a class="subLink" href="file:///Users/teresatorres/dev/wdi/NANN/views/continuingEducation.html" target="_self">Continuing Education</a></li>
                   <li><a href="#" target="_self">Schedule</a></li>
@@ -191,9 +193,10 @@
       </address>
     </footer>
 
-
+    </div>
     <!-- SCRIPTS DEPENDENCIES -->
     <script src="../public/javascripts/lib/jquery.min.js"></script>
+    <script src="../public/javascripts/lib/jquery.mmenu.min.js"></script>
     <!-- APPLICATION JAVASCRIPT -->
     <script src="../public/javascripts/app.js"></script>
     <!-- ALERT TO UPDATE OLDER BROWSERS -->

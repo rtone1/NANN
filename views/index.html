@@ -14,8 +14,11 @@
     <link rel="stylesheet" href="../public/stylesheets/common.css" media="screen">
     <link rel="stylesheet" href="../public/stylesheets/landing.css" media="screen" >
     <link rel="stylesheet" href="../public/stylesheets/animations.css" media="screen">
+    <link rel="stylesheet" href="../public/stylesheets/lib/jquery.mmenu.css" media="screen" >
   </head>
   <body>
+    <div class="wrapper">
+
     <div class="back"></div>
     <!-- HEADER WITH TOP NAV AND MAIN NAVIGATION -->
     <header>
@@ -28,29 +31,27 @@
               <li><a href="#" target="_self">STORE</a></li>
               <li><a href="#" target="_self">CONTACT</a></li>
               <li><a href="#" target="_self">LOGIN</a></li>
-              <li><div class="hamIcon">
+              <li><a href="#mobile-menu"><div class="hamIcon">
                     <div></div>
                     <div></div>
                     <div></div>
-                  </div>
+                  </div></a>
               </li>
             </ul>
           </div>
           <div class="search">
             <form class="searchForm" action="index.html" name="" method="post">
-              <input class="textSearch" type="text" name="name" placeholder="search...">
+              <input class="textSearch" type="text" placeholder="search...">
               <input type="image" src="../public/images/searchIcon.png" alt="Submit">
             </form>
-            <div class="searchIcon" title="click to search">
-                <div class="circle"></div>
-                <div class="line"></div>
-            </div>
+            <div class="searchIcon" title="click to search"></div>
           </div>
         </div>
       </div>
       <div class="nav-ct">
         <a href="#"><img src="../public/images/nannLogo.png" alt="National Association of Neonatal Nurses logo." title="National Association of Neonatal Nurses"/></a>
-        <nav class="mainNav">
+
+        <nav class="mainNav" id="mobile-menu">
           <ul>
             <li><a class="mainActive" href="file:///Users/teresatorres/dev/wdi/NANN/views/index.html">ABOUT</a></li>
             <li><a href="#">MEMBERSHIP</a></li>
@@ -66,10 +67,14 @@
     <!-- LADING PAGE CONTAINER -->
     <div class="page-ctn">
 
-      <section class="heroMain">
-        <img src="../public/images/heroMainMobile.jpg" alt="" />
-        <h1>Making a difference for neonatal nurses, patients, and families.</h1>
-      </section>
+        <section class="heroMain">
+          <div>
+            <div>
+              <h1>Making a difference for neonatal nurses, patients, and families. </h1>
+            </div>
+          </div>
+        </section>
+
 
       <div class="content">
 
@@ -232,7 +237,6 @@
 
           <section class="asidePost">
             <article>
-
               <div class="text">
                 <div class="textInfo">
                   <img src="../public/images/couplesChild.jpg" alt="" />
@@ -275,13 +279,14 @@
       </address>
     </footer>
 
+    </div>
 
     <!-- SCRIPTS DEPENDENCIES -->
     <script src="../public/javascripts/lib/jquery.min.js"></script>
+    <script src="../public/javascripts/lib/jquery.mmenu.min.js"></script>
     <!-- APPLICATION JAVASCRIPT -->
     <script src="../public/javascripts/app.js"></script>
     <!-- ALERT TO UPDATE OLDER BROWSERS -->
     <script src="../public/javascripts/alert.js"></script>
-
   </body>
 </html>

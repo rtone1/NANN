@@ -4,13 +4,13 @@
 /*ASIDE NAVIGATIONAL MENU*/
 .sideNav{
   float: left;
-  width: 20%;
-  padding-right: 1%;
+  width: 19%;
+  margin-right: 1%;
 }
 .sideNav ul{
   list-style: none;
 }
-.mainList li a{
+.sideNav ul li a{
   padding: 5px 0px;
   font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
 }
@@ -21,10 +21,10 @@
   color: #EF632F;
   transition: .2s;
 }
-.subList li{
+.sideNav ul li ul{
   margin-left: 8%;
 }
-.subList li a{
+.sideNav ul li ul li a{
   font-weight: 100;
   font-family: OpenSans, Helvetica, 'Arial', sans-serif;
 }
@@ -37,8 +37,8 @@ aside a{
 .artInfo{
   float: right;
   clear: both;
-  width: 80%;
-  padding-left: 1%;
+  width: 79%;
+  margin-left: 1%;
 }
 .artInfo > img{
   width: 100%;
@@ -132,7 +132,7 @@ aside a{
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 655px) {
   .sideNav{
     display: none;
   }
@@ -142,7 +142,7 @@ aside a{
   .artInfo{
     float: none;
     width: 100%;
-    padding: 0px;
+    margin: 0px;
   }
   .artInfo > img{
     padding: 0px;

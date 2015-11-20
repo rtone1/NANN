@@ -1,31 +1,40 @@
 /*MAIN HERO SECTION*/
-  .heroMain::before,
-  .heroMain::after{
+  .heroMain > div::before,
+  .heroMain > div::after{
     content: "";
     display: table;
   }
-  .heroMain::after{
+  .heroMain > div::after{
     clear: both;
   }
   .heroMain{
+    width: 100%;
+    background: url("../../public/images/heroMain.jpg") #fff no-repeat;
+    background-size: contain;
+  }
+  .heroMain > div{
     clear: both;
     width: 100%;
-    padding: 160px 30px;
-    background: url("../../public/images/heroMain.jpg") #fff no-repeat;
-    background-size: cover;
+    padding: 12% 0px;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 46%, rgba(255,255,255,0.5)  53%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 101%);
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 46%,rgba(255,255,255,0.5) 53%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
+    background: linear-gradient(to right,  rgba(255,255,255,0) 46%,rgba(255,255,255,0.5) 53%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  }
+  .heroMain div > div{
+    float: right;
+    width: 480px;
+    height: 255px;
+    margin-right: 30px;
+    overflow: hidden;
   }
   .heroMain h1{
-    float: right;
-    width: 430px;
-    font-size: 42px;
+    font-size: 46px;
     line-height: 1.4em;
   }
   .ie8 .heroMain{
     overflow: auto;
     zoom: 1;
-  }
-  .heroMain img{
-    display: none;
   }
 
 /*CALL TO ACTION BUTTONS*/
@@ -48,6 +57,11 @@
   padding: 0px 0px 30px;
   background-color: #15539c;
   border-radius: 0px 0px 20px 20px;
+  -ms-border-radius: 0px 0px 20px 20px;
+  -moz-border-radius: 0px 0px 20px 20px;
+  -o-border-radius: 0px 0px 20px 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
 }
 .ctaLarge img{
   width: 50%;
@@ -56,28 +70,37 @@
 }
 .ctaLarge h2{
   width: 100%;
-  padding: 5px;
+  padding: 5px 0px;
   margin: 0px;
   background-color: #BFD730;
   border-radius: 20px 20px 0px 0px;
+  -ms-border-radius: 20px 20px 0px 0px;
+  -moz-border-radius: 20px 20px 0px 0px;
+  -o-border-radius: 20px 20px 0px 0px;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
   font-size: 24px;
 }
 .ctaLarge span{
   display: inline-block;
   padding: 5px 30px;
   margin-top: 10px;
-  border-radius: 15px;
   background-color: #ef632f;
   letter-spacing: .5px;
   line-height: 24px;
+  border-radius: 15px;
+  -ms-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
 }
 
 /*NEWS FEED SECTION*/
   .newsFeed{
     float: left;
     clear: both;
-    width: 60%;
-    padding-right: 1%;
+    width: 59%;
+    margin-right: 1%;
   }
   .newsFeed article{
     padding: 10px 0px;
@@ -91,21 +114,30 @@
 /*ASIDE CALL TO ACTION SECTION*/
 .asideRight{
   float: left;
-  width: 40%;
-  min-width: 247px;
-  padding-left: 1%;
+  width: 39%;
+  min-width: 242px;
+  margin-left: 1%;
 }
 .aside-cta{
   margin-bottom: 40px;
-  border-radius: 10px;
   background: url("../../public/images/circles.png") #d3e268 no-repeat;
   background-size: 180px;
   background-position: right -40px bottom -100px;
+  border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 .asideLogo{
   padding: 10px;
-  border-radius: 10px 10px 0px 0px;
   background-color: #4cb2b0;
+  border-radius: 10px 10px 0px 0px;
+  -ms-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -o-border-radius: 10px 10px 0px 0px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
 }
 .asideLogo img{
   width: 50%;
@@ -170,13 +202,13 @@
     .content {
       padding: 80px 0px 120px;
     }
-    .heroMain{
-      padding: 200px 30px;
+    .heroMain div > div {
+      width: 690px;
+      height: 390px;
     }
     .heroMain h1 {
-        width: 690px;
-        font-size: 68px;
-        transition: .2s;
+      font-size: 68px;
+      transition: .2s;
     }
     .ctaLarge{
       margin-bottom: 40px;
@@ -194,14 +226,27 @@
       background-position: right -80px bottom -150px;
    }
 }
+@media only screen and (min-width: 2600px) {
+  .heroMain > div {
+    padding: 12% 5%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,0.5) 54%,rgba(255,255,255,1) 59%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 50%,rgba(255,255,255,0.5) 54%,rgba(255,255,255,1) 59%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  }
+}
 
 @media only screen and (min-width: 2600px) {
-    .heroMain{
-      padding: 300px 60px;
+   .heroMain > div {
+      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 45%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
+      background: linear-gradient(to right, rgba(255,255,255,0) 45%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+    }
+    .heroMain div > div {
+      width: 990px;
+      height: 570px;
     }
     .heroMain h1 {
-        width: 990px;
-        font-size: 98px;
+      font-size: 98px;
     }
     .ctaLarge h2{
       font-size: 68px;
@@ -220,19 +265,21 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .heroMain{
-    background-size: contain;
-    padding: 12% 30px;
+  .heroMain div > div {
+    width: 420px;
+    transition: .2s;
   }
   .heroMain h1{
-    width: 400px;
-    font-size: 38px;
+    font-size: 42px;
     transition: .2s;
   }
 }
 @media only screen and (max-width: 1000px) {
+  .heroMain div > div {
+    width: 320px;
+    height: 185px;
+  }
   .heroMain h1{
-    width: 330px;
     font-size: 32px;
   }
   .ctaLarge h2{
@@ -241,12 +288,15 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .heroMain{
-    padding: 10% 30px;
-  }
   .heroMain h1{
-    width: 280px;
+    /*width: 450px;
+    padding: 10% 60px 10% 100px;*/
     font-size: 28px;
+  }
+  .heroMain div > div {
+    width: 290px;
+    height: 160px;
+    margin-right: 10px;
   }
   .ctaLarge h2{
     font-size: 18px;
@@ -255,22 +305,26 @@
     line-height: 20px;
   }
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 655px) {
   .heroMain{
-    position: relative;
-    width: 100%;
-    padding: 0px;
-    background-image: none;
+    background-size: cover;
   }
-  .heroMain img{
-    display: block;
+  .heroMain > div {
+    padding: 40% 0px 0px;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 55%, rgba(255,255,255,0.3) 65%, rgba(255,255,255,1) 77%, rgba(255,255,255,1) 101%);
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 55%,rgba(255,255,255,0.3) 65%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 101%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 55%,rgba(255,255,255,0.3) 65%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 101%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  }
+  .heroMain div > div {
+    float: right;
     width: 100%;
+    height: auto;
+    margin: 0px;
+    overflow: hidden;
   }
   .heroMain h1{
-    position: absolute;
-    bottom: 0px;
     float: none;
-    width: 100%;
     padding:  0px 30px 10px;
     font-size: 32px;
   }
@@ -325,10 +379,11 @@
   .newsFeed{
     width: 100%;
     padding-bottom: 30px;
+    margin-right: 0px;
   }
   .asideRight{
     width: 100%;
-    padding-left: 0px;
+    margin-left: 0px;
   }
   .aside-cta{
     display: none;

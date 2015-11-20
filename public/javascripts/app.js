@@ -37,14 +37,16 @@ $(function(){
     });
 
     $(window).resize(function(){
-      if($(window).width() < 650){
+      if($(window).width() < 655){
         $('.searchForm').css({ width: 90 + '%'});
         $('.textSearch').css({ width: 100 + '%', opacity: 1 });
-      } else if ($(window).width() > 650) {
+        $('.ctaLarge').last().show();
+      } else if ($(window).width() > 655) {
         $('.searchForm').removeAttr('style');
         $('.textSearch').removeAttr('style');
+        $('.ctaLarge').last().hide();
       }
-      if(counter === 1 && $(window).width() > 650){
+      if(counter === 1 && $(window).width() > 655){
         $(action).css({width: 250, opacity: 1});
       }
       if(counter === 1 && $(window).width() > 1600){
@@ -61,7 +63,7 @@ $(function(){
             counter += 1;
             var that = this;
               $(that).css({ position: "fixed", top: 25 + '%', width: 90+ '%', margin: 0, left: -300, zIndex: 1000 }).animate({left: 5 + '%'}, 200, 'linear');
-              $('.back').addClass('black')
+              $('.back').addClass('black');
           $('.back').on('click', function(){
             $(that).removeAttr('style');
             $('.back').removeClass('black');
@@ -77,6 +79,22 @@ $(function(){
 }());
 
 $(document).ready(function(){
+
+    $('#mobile-menu').mmenu({
+      }, {
+        pageNodetype: 'div',
+        clone: true
+    });
+
+if($(window).width() > 655){
+  $('.ctaLarge').last().hide();
+}else {
+  $('.ctaLarge').last().show();
+}
+
+
+
+
 
   // CALL FUNTIONS ON DOM
   $.fn.searchMore( 0, $('.searchIcon'), $('.textSearch') );
