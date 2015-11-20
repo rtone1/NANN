@@ -1,39 +1,26 @@
-
-
-
-/*ASIDE NAVIGATIONAL MENU*/
+/*---- ASIDE NAVIGATIONAL MENU ----*/
 .sideNav{
   float: left;
   width: 19%;
   margin-right: 1%;
 }
-.sideNav ul{
-  list-style: none;
-}
+.sideNav ul{ list-style: none; }
 .sideNav ul li a{
   padding: 5px 0px;
   font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
 }
-.sideNav ul a{
-  display: block;
-}
+.sideNav ul a{ display: block; }
 .sideNav ul a:hover{
   color: #EF632F;
   transition: .2s;
 }
-.sideNav ul li ul{
-  margin-left: 8%;
-}
+.sideNav ul li ul{ margin-left: 8%; }
 .sideNav ul li ul li a{
   font-weight: 100;
   font-family: OpenSans, Helvetica, 'Arial', sans-serif;
 }
-aside a{
-  color:  #15539c;
-}
 
-
-/*EDUCATION ARTICLE SECTION*/
+/*---- EDUCATION ARTICLE SECTION ----*/
 .artInfo{
   float: right;
   clear: both;
@@ -45,23 +32,7 @@ aside a{
   height: auto;
   margin: 10px 0px 30px;
 }
-.artInfo article::before,
-.artInfo article::after{
-  content: "";
-  display: table;
-}
-.artInfo article::after{
-  clear: both;
-}
-.artInfo article{
-  clear: both;
-}
-.art-ct{
-  clear: left;
-  margin-bottom: 40px;
-  color: #7B6F67;
-  font-family: OpenSans, Helvetica, 'Arial', sans-serif;
-}
+.art-ct{ margin-bottom: 40px; }
 .art-ct > article{
   margin: 30px 0px;
   padding: 0px 10px;
@@ -71,39 +42,22 @@ aside a{
   min-width: 130px;
   height: auto;
 }
-.left{
-  float: left;
-  margin: 10px 2% 10px 0px;
-}
-.right{
-  float: right;
-  margin: 10px 0px 10px 2% ;
-}
-.art-ct ul{
-  padding: 20px 5%;
-}
-
-
-.art-ct h2{
-  color: #15539c;
-  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
-}
+.art-ct ul{ padding: 20px 5%; }
+.art-ct h2{ color: #15539c; }
 .art-ct h3{
   color: #4cb2b0;
-  font-family: OpenSansBold, 'Open Sans', Helvetica, 'Arial', sans-serif;
 }
 .art-ct h4,
 .art-ct h5,
 .art-ct h6{
   color: #565555;
 }
-
 .art-ct a{
   display: inline-block;
   margin: 10px 0px;
   padding: 5px 30px;
-  background-color: #ef632f;
   border-radius: 20px;
+  background-color: #ef632f;
 }
 .art-ct a:hover{
   background-color: #EE845C;
@@ -111,34 +65,27 @@ aside a{
 }
 
 @media only screen and (min-width: 1600px) {
-  .art-ct{
-    margin-bottom: 40px;
-  }
+  .art-ct{ margin-bottom: 40px; }
   .art-ct a {
     margin: 30px 0px;
     border-radius: 30px;
   }
-  .art-ct h2 {
-    margin-bottom: 20px;
-  }
-  .art-ct ul {
-    padding: 40px 5%;
-  }
+  .art-ct h2 { margin-bottom: 20px; }
+  .art-ct ul { padding: 40px 5%; }
 }
 
 @media only screen and (min-width: 2600px) {
-  .art-ct a {
-    border-radius: 40px;
-  }
+  .art-ct a { border-radius: 40px; }
 }
 
 @media only screen and (max-width: 655px) {
-  .sideNav{
-    display: none;
+  .content{
+    width: 100%;
+    margin: 0px;
+    padding: 0px 0px 60px;
   }
-  .border{
-    border: none;
-  }
+  .sideNav{ display: none; }
+  .border{ border: none; }
   .artInfo{
     float: none;
     width: 100%;
@@ -152,13 +99,4 @@ aside a{
     margin: 30px 0px;
     padding: 0px 10px;
   }
-  .content{
-    width: 100%;
-    margin: 0px;
-    padding: 0px 0px 60px;
-  }
 }
-
-@media only screen and (max-width: 550px) {}
-
-@media only screen and (max-width: 450px) {}

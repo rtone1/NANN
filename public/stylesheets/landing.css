@@ -1,19 +1,10 @@
-/*MAIN HERO SECTION*/
-  .heroMain > div::before,
-  .heroMain > div::after{
-    content: "";
-    display: table;
-  }
-  .heroMain > div::after{
-    clear: both;
-  }
+/*---- MAIN HERO SECTION ----*/
   .heroMain{
     width: 100%;
     background: url("../../public/images/heroMain.jpg") #fff no-repeat;
     background-size: contain;
   }
   .heroMain > div{
-    clear: both;
     width: 100%;
     padding: 12% 0px;
     background: -moz-linear-gradient(left,  rgba(255,255,255,0) 46%, rgba(255,255,255,0.5)  53%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 101%);
@@ -28,16 +19,9 @@
     margin-right: 30px;
     overflow: hidden;
   }
-  .heroMain h1{
-    font-size: 46px;
-    line-height: 1.4em;
-  }
-  .ie8 .heroMain{
-    overflow: auto;
-    zoom: 1;
-  }
+  .heroMain h1{ font-size: 46px; }
 
-/*CALL TO ACTION BUTTONS*/
+/*---- CALL TO ACTION BUTTONS SECTION ----*/
 .ctaLarge{
   float: left;
   width: 32%;
@@ -47,32 +31,26 @@
   text-align: center;
   text-transform: uppercase;
 }
-.ctaLarge:first-child{
-  margin-left: 0%;
-}
-.ctaLarge:last-child{
-  display: none;
-}
+.ctaLarge:first-child{ margin-left: 0%; }
+.ctaLarge:last-child{ display: none; }
 .ctaLarge div{
   padding: 0px 0px 30px;
-  background-color: #15539c;
   border-radius: 0px 0px 20px 20px;
   -ms-border-radius: 0px 0px 20px 20px;
   -moz-border-radius: 0px 0px 20px 20px;
   -o-border-radius: 0px 0px 20px 20px;
   -webkit-border-bottom-left-radius: 20px;
   -webkit-border-bottom-right-radius: 20px;
+  background-color: #15539c;
 }
 .ctaLarge img{
-  width: 50%;
   display: block;
+  width: 50%;
   margin: 0px auto;
 }
 .ctaLarge h2{
-  width: 100%;
   padding: 5px 0px;
   margin: 0px;
-  background-color: #BFD730;
   border-radius: 20px 20px 0px 0px;
   -ms-border-radius: 20px 20px 0px 0px;
   -moz-border-radius: 20px 20px 0px 0px;
@@ -80,12 +58,12 @@
   -webkit-border-top-left-radius: 20px;
   -webkit-border-top-right-radius: 20px;
   font-size: 24px;
+  background-color: #BFD730;
 }
 .ctaLarge span{
   display: inline-block;
   padding: 5px 30px;
   margin-top: 10px;
-  background-color: #ef632f;
   letter-spacing: .5px;
   line-height: 24px;
   border-radius: 15px;
@@ -93,12 +71,12 @@
   -moz-border-radius: 15px;
   -o-border-radius: 15px;
   -webkit-border-radius: 15px;
+  background-color: #ef632f;
 }
 
-/*NEWS FEED SECTION*/
+/*---- NEWS FEED SECTION ----*/
   .newsFeed{
     float: left;
-    clear: both;
     width: 59%;
     margin-right: 1%;
   }
@@ -106,12 +84,9 @@
     padding: 10px 0px;
     border-bottom: solid 2px #808080;
   }
-  .newsFeed ul{
-    padding: 20px 40px;
-    color: #7B6F67;
-  }
+  .newsFeed ul{ padding: 20px 40px; }
 
-/*ASIDE CALL TO ACTION SECTION*/
+/*---- ASIDE CALL TO ACTION SECTION ----*/
 .asideRight{
   float: left;
   width: 39%;
@@ -120,54 +95,38 @@
 }
 .aside-cta{
   margin-bottom: 40px;
-  background: url("../../public/images/circles.png") #d3e268 no-repeat;
-  background-size: 180px;
-  background-position: right -40px bottom -100px;
   border-radius: 10px;
   -ms-border-radius: 10px;
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
   -webkit-border-radius: 10px;
+  background: url("../../public/images/circles.png") #d3e268 no-repeat;
+  background-size: 180px;
+  background-position: right -40px bottom -100px;
 }
 .asideLogo{
-  padding: 10px;
-  background-color: #4cb2b0;
+  padding: 3%;
   border-radius: 10px 10px 0px 0px;
   -ms-border-radius: 10px 10px 0px 0px;
   -moz-border-radius: 10px 10px 0px 0px;
   -o-border-radius: 10px 10px 0px 0px;
   -webkit-border-top-left-radius: 10px;
   -webkit-border-top-right-radius: 10px;
+  background-color: #4cb2b0;
 }
 .asideLogo img{
   width: 50%;
   min-width: 150px;
 }
-.aside-cta-text{
-  padding: 20px 10px;
-}
+.aside-cta-text{ padding: 5% 3%; }
 
 
 /*ASIDE POST CONTENT*/
-.asidePost::before,
-.asidePost::after{
-  content: "";
-  display: table;
-}
-.asidePost::after{
-  clear: both;
-}
-.asidePost{
-  clear: both;
-}
 .asidePost img{
   float: left;
   width: 35%;
-  max-width: 280px;
 }
-.asidePost .textInfo{
-  height: 230px;
-}
+.asidePost .textInfo{ height: 230px; }
 .asidePost h2,
 .asidePost h3,
 .asidePost p,
@@ -189,19 +148,10 @@
 .borderColors .colorO{ width: 23.5%; background-color: #f16829;}
 .borderColors .colorB{ width: 23.5%; background-color: #01529a;}
 
-
-.imageZoom{
-  position: fixed;
-  top: 32%;
-  width: 90%;
-  margin: 0px;
-  left: 5%;
-}
 /*MEDIA QUERIES FOR LANDING CONTENT*/
 @media only screen and (min-width: 1600px) {
-    .content {
-      padding: 80px 0px 120px;
-    }
+    .content { padding: 80px 0px 120px; }
+
     .heroMain div > div {
       width: 690px;
       height: 390px;
@@ -210,25 +160,23 @@
       font-size: 68px;
       transition: .2s;
     }
-    .ctaLarge{
-      margin-bottom: 40px;
-    }
-    .ctaLarge h2{
-      font-size: 48px;
-    }
+    .ctaLarge{ margin-bottom: 40px; }
+    .ctaLarge h2{ font-size: 48px; }
     .ctaLarge span {
       padding: 15px 40px;
       border-radius: 30px;
    }
+
    .aside-cta{
       margin-bottom: 60px;
       background-size: 280px;
       background-position: right -80px bottom -150px;
    }
 }
-@media only screen and (min-width: 2600px) {
+@media only screen and (min-width: 2000px) {
   .heroMain > div {
     padding: 12% 5%;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 50%, rgba(255,255,255,0.5)  54%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 101%);
     background: -webkit-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,0.5) 54%,rgba(255,255,255,1) 59%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
     background: linear-gradient(to right, rgba(255,255,255,0) 50%,rgba(255,255,255,0.5) 54%,rgba(255,255,255,1) 59%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
@@ -237,6 +185,7 @@
 
 @media only screen and (min-width: 2600px) {
    .heroMain > div {
+     background: -moz-linear-gradient(left,  rgba(255,255,255,0) 45%, rgba(255,255,255,0.5)  50%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 101%);
       background: -webkit-linear-gradient(left, rgba(255,255,255,0) 45%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
       background: linear-gradient(to right, rgba(255,255,255,0) 45%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 41%,rgba(255,255,255,1) 101%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
@@ -245,12 +194,9 @@
       width: 990px;
       height: 570px;
     }
-    .heroMain h1 {
-      font-size: 98px;
-    }
-    .ctaLarge h2{
-      font-size: 68px;
-    }
+    .heroMain h1 { font-size: 98px; }
+
+    .ctaLarge h2{ font-size: 68px; }
     .ctaLarge span {
       padding: 20px 60px;
       border-radius: 30px;
@@ -258,9 +204,6 @@
    .aside-cta{
       background-size: 380px;
       background-position: right -100px bottom -200px;
-   }
-   .asidePost img {
-      max-width: 350px;
    }
 }
 
@@ -279,31 +222,20 @@
     width: 320px;
     height: 185px;
   }
-  .heroMain h1{
-    font-size: 32px;
-  }
-  .ctaLarge h2{
-    font-size: 20px;
-  }
+  .heroMain h1{ font-size: 32px; }
+  .ctaLarge h2{ font-size: 20px; }
 }
 
 @media only screen and (max-width: 800px) {
-  .heroMain h1{
-    /*width: 450px;
-    padding: 10% 60px 10% 100px;*/
-    font-size: 28px;
-  }
   .heroMain div > div {
     width: 290px;
     height: 160px;
     margin-right: 10px;
   }
-  .ctaLarge h2{
-    font-size: 18px;
-  }
-  .ctaLarge span{
-    line-height: 20px;
-  }
+  .heroMain h1{ font-size: 28px; }
+
+  .ctaLarge h2{ font-size: 18px; }
+  .ctaLarge span{ line-height: 20px; }
 }
 @media only screen and (max-width: 655px) {
   .heroMain{
@@ -317,18 +249,15 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
   }
   .heroMain div > div {
-    float: right;
     width: 100%;
     height: auto;
     margin: 0px;
-    overflow: hidden;
   }
   .heroMain h1{
-    float: none;
     padding:  0px 30px 10px;
     font-size: 32px;
   }
-/*---CALL TO ACTION BUTTONS MOBILE---*/
+
   .ctaLarge{
     float: none;
     width: 100%;
@@ -337,20 +266,13 @@
     margin-bottom: 20px;
     text-align: left;
   }
-  .ctaLarge:last-child{
-    display: block;
-    text-align: center;
-  }
   .ctaLarge div{
     float: none;
     width: 10%;
     height: 80px;
     padding: 0px 0px;
-    background-color: #BFD730;
     border-radius: 10px 0px 0px 10px;
-  }
-  .ctaLarge:last-child div{
-    display: none;
+    background-color: #BFD730;
   }
   .ctaLarge img{
     display: none;
@@ -358,24 +280,26 @@
   .ctaLarge h2{
     float: right;
     width: 90%;
-    padding: 26px 0px 26px 5%;
     margin: 0px;
-    background-color: #15539c;
+    padding: 26px 0px 26px 5%;
     border-radius: 0px 10px 10px 0px;
     font-size: 24px;
     color: #fff;
+    background-color: #15539c;
+  }
+  .ctaLarge:last-child{
+    display: block;
+    text-align: center;
   }
   .ctaLarge:last-child h2{
     width: 100%;
+    margin-bottom: 20px;
     padding: 26px 0px 26px 0px;
     border-radius: 10px;
     background-color: #4cb2b0;
-    margin-bottom: 20px;
   }
-  .ctaLarge span{
-    display: none;
-  }
-/*---NEWS FEED MOBILE---*/
+  .ctaLarge span{ display: none; }
+
   .newsFeed{
     width: 100%;
     padding-bottom: 30px;
@@ -385,15 +309,11 @@
     width: 100%;
     margin-left: 0px;
   }
-  .aside-cta{
-    display: none;
-  }
+  .aside-cta{ display: none; }
 
 }
 @media only screen and (max-width: 550px) {
-  .heroMain h1{
-    font-size: 24px;
-  }
+  .heroMain h1{ font-size: 24px; }
 }
 @media only screen and (max-width: 450px) {
   .heroMain h1{

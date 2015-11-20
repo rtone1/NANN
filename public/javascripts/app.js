@@ -12,7 +12,7 @@ $(function(){
     $(target).on('click', function(){
       if (counter === 0 ){
         if ($(window).width() > 1600){
-          $(action).animate({width: 550},200,"linear").css({opacity: 1});
+          $(action).animate({width: 400},200,"linear").css({opacity: 1});
         }
         if ($(window).width() < 1600){
           $(action).animate({width: 250},200,"linear").css({opacity: 1});
@@ -50,7 +50,7 @@ $(function(){
         $(action).css({width: 250, opacity: 1});
       }
       if(counter === 1 && $(window).width() > 1600){
-        $(action).css({width: 550, opacity: 1});
+        $(action).css({width: 400, opacity: 1});
       }
     });
 
