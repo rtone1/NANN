@@ -3,9 +3,9 @@
 - 2. Repeated Styles and Fonts
 - 3. Active Links and Extra Styles
 - 4. Header and Navigation
-- Page Footer
-- Media Queries
-- Animations
+- 5. Page Footer
+- 6. Media Queries
+- 7. Animations
 */
 
 /*---- 1. NORMALIZE STYLES SECTION ----*/
@@ -255,6 +255,11 @@ header{
     display: inline-block;
     margin-left: 10px;
   }
+  .ie7 .navTop ul li,
+  .ie6 .navTop ul li{
+    display: inline-block;
+    float: left;
+  }
   .navTop ul li a:hover{
     color: #429FAC;
     transition: .2s;
@@ -267,6 +272,11 @@ header{
   display: inline-block;
   top: 10px;
   margin: 0px 10px 0px 0px;
+}
+.ie7 .search,
+.ie6 .search{
+  display: inline-block;
+  float: left;
 }
 .searchIcon{
   position: absolute;
@@ -282,10 +292,34 @@ header{
   -moz-border-radius: 100%;
   -webkit-border-radius: 100px;
   -o-border-radius: 100%;
-  background: url("../../public/images/searchIconDesk.png") center center no-repeat;
+  background: url("../../public/images/searchIconDesk.png") center no-repeat;
   background-size: 80%;
   background-color: #15539c;
 }
+
+.ie8 .searchIcon,
+.ie7 .searchIcon,
+.ie6 .searchIcon{
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  right: 0px;
+  width: 52px;
+  height: 45px;
+  background-image: none;
+}
+
+.ie8 .searchIcon img,
+.ie7 .searchIcon img,
+.ie6 .searchIcon img{
+  position: absolute;
+  display: inline-block;
+  top: 2px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+}
+
   .searchForm{
     display: inline-block;
     vertical-align: top;
@@ -311,6 +345,12 @@ header{
   outline: 0;
   border: 1px solid #93B7CC;
   }
+  .ie8 input[type=text]{ padding-top: 10px; }
+  .ie7 input[type=text],
+  .ie6 input[type=text]{
+    padding: 10px 2px;
+    height: 23px;
+  }
   /*HIDE SEARCH ICON ON DESKTOP VIEW*/
   input[type=image]{ display: none; }
 
@@ -334,6 +374,14 @@ header{
 }
 .mainNav ul li{
   display: inline-block;
+}
+.ie7 .mainNav,
+.ie6 .mainNav{
+  margin-top: 60px;
+}
+.ie7 .mainNav ul li,
+.ie6 .mainNav ul li{
+  float: left;
 }
 .mainNav ul li a{
   display: block;
@@ -379,6 +427,10 @@ address{
   margin-left: 2%;
   width: 10%;
   min-width: 45px;
+}
+.ie7 .socialMedia ul li,
+.ie6 .socialMedia ul li{
+  float: left;
 }
 .socialMedia ul li:first-child{
   margin-left: 0px;
@@ -730,8 +782,6 @@ address{
 
   .navTop ul li:last-child{ width: 35px; }
 }
-
-
 
 /*ANIMATIONS CLASSES*/
 .searchActive{

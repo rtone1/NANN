@@ -19,7 +19,7 @@
     margin-right: 30px;
     overflow: hidden;
   }
-  .heroMain h1{ font-size: 46px; }
+  .heroMain h1{ font-size: 46px; font-weight: 100;}
 
 /*---- CALL TO ACTION BUTTONS SECTION ----*/
 .ctaLarge{
@@ -28,6 +28,7 @@
   min-width: 180px;
   margin-left: 2%;
   margin-bottom: 20px;
+  font-weight: 100;
   text-align: center;
   text-transform: uppercase;
 }
@@ -142,6 +143,11 @@
   display: inline-block;
   margin-left: 2%;
   height: 20px;
+}
+.ie8 .borderColors div,
+.ie7 .borderColors div,
+.ie6 .borderColors div{
+  float: left;
 }
 .borderColors .colorG{ width: 23.5%; margin-left: 0px; background-color: #02b2af;}
 .borderColors .colorY{ width: 23.5%; background-color: #fbe444;}
@@ -272,6 +278,8 @@
     height: 80px;
     padding: 0px 0px;
     border-radius: 10px 0px 0px 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
     background-color: #BFD730;
   }
   .ctaLarge img{
@@ -283,6 +291,9 @@
     margin: 0px;
     padding: 26px 0px 26px 5%;
     border-radius: 0px 10px 10px 0px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
     font-size: 24px;
     color: #fff;
     background-color: #15539c;
@@ -296,6 +307,8 @@
     margin-bottom: 20px;
     padding: 26px 0px 26px 0px;
     border-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
     background-color: #4cb2b0;
   }
   .ctaLarge span{ display: none; }

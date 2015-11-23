@@ -17,4 +17,4 @@ document.createElement("figcaption");
         alert("You are using an outdated " + sBrowser + " version. Please update to the latest version for a better web experience.");
       }
   };
-  // updateBrowser();
+  updateBrowser();
