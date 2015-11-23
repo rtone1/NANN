@@ -606,6 +606,9 @@ address{
   .content table{
     font-size: 16px;
   }
+  address{
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 655px) {
@@ -746,7 +749,6 @@ address{
   }
   address{
     float: none;
-    font-size: 16px;
     margin-top: 20px;
     margin-left: 0px;
   }
@@ -781,16 +783,39 @@ address{
   }
 
   .navTop ul li:last-child{ width: 35px; }
+
 }
+
+@media only screen and (max-width: 325px) {
+
+  input[type=text]{
+    width: 230px;
+  }
+
+}
+
+
 
 /*ANIMATIONS CLASSES*/
 .searchActive{
   background-color: #429FAC;
   animation: clockWise .5s forwards;
+  -webkit-animation-name: clockWise;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: clockWise .5s forwards;
+  -ms-animation: clockWise .5s forwards;
+  -o-animation: clockWise .5s forwards;
   transition: all .2s linear 0s;
 }
 .unActivate{
   background-color: #15539c;
   animation: counterClockWise .5s forwards;
+  -webkit-animation-name: counterClockWise;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: counterClockWise .5s forwards;
+  -ms-animation: counterClockWise .5s forwards;
+  -o-animation: counterClockWise .5s forwards;
   transition: all .2s linear 0s;
 }

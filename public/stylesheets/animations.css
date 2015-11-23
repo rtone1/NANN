@@ -4,8 +4,8 @@
   100% { transform: rotate(360deg); }
 }
 @-webkit-keyframes clockWise{
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); }
+  100% { transform: rotate(360deg); -webkit-transform: rotate(360deg); }
 }
 
 @keyframes counterClockWise{
@@ -13,6 +13,6 @@
   100% { transform: rotate(-358deg); }
 }
 @-webkit-keyframes counterClockWise{
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-358deg); }
+  0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); }
+  100% { transform: rotate(-358deg); -webkit-transform: rotate(-358deg); }
 }

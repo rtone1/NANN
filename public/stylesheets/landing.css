@@ -243,6 +243,7 @@
   .ctaLarge h2{ font-size: 18px; }
   .ctaLarge span{ line-height: 20px; }
 }
+
 @media only screen and (max-width: 655px) {
   .heroMain{
     background-size: cover;
