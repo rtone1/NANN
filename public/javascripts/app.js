@@ -17,16 +17,16 @@ $(function(){
   // WINDOW RESIZING FUNCTION //
   var windowResize = function( action ){
     $(window).resize(function(){
-      if($(window).width() < 655){
+      if($(window).width() <= 655 ){
         $('.textSearch').removeAttr('style');
         $('.ctaLarge').last().show();
-      } else if ($(window).width() > 655) {
+      } else if ($(window).width() >= 655) {
         $('.ctaLarge').last().hide();
       }
-      if(counter === 1 && $(window).width() > 655){
+      if(counter === 1 && $(window).width() >= 656){
         $(action).css({width: 250, opacity: 1});
       }
-      if(counter === 1 && $(window).width() > 1599){
+      if(counter === 1 && $(window).width() >= 1599){
         $(action).css({width: 400, opacity: 1});
       }
     });
